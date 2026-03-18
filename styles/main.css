@@ -3,107 +3,126 @@
    https://design.rt.ru/gen2/
    
    Цветовая схема: Комплементарная (Purple + Orange-Red)
+   Стиль: Теплый Бохо с элементами ИТ-эстетики
    Правило 60-30-10: 60% основной, 30% вторичный, 10% акцент
    =================================== */
 
 /* ===================================
-   CSS Variables — Rostelecom Theme
+   CSS Variables — Rostelecom Boho Theme
    =================================== */
 :root {
-    /* ===== Primary Colors — Rostelecom Official Palette ===== */
-    /* Primary 1 (Purple) — основной брендовый цвет */
+    /* ===== Primary Colors — Rostelecom Official Palette (Warm Adaptation) ===== */
+    /* Primary 1 (Purple) — смягчённый для бохо-стиля */
     --primary-1-day: #7700FF;
     --primary-1-night: #9466FF;
     --primary-1-light: #B380FF;
     --primary-1-lighter: #D4B3FF;
-    --primary-1-lightest: #E8D9FF;
+    --primary-1-lightest: #F5EDFF;
+    --primary-1-warm: #8B5CF6;
     
-    /* Primary 2 (Orange-Red) — вторичный брендовый цвет */
+    /* Primary 2 (Orange-Red) — тёплый, терракотовый оттенок */
     --primary-2-day: #FF4F12;
     --primary-2-night: #FF5E2D;
     --primary-2-light: #FF7A50;
     --primary-2-lighter: #FF9B7A;
-    --primary-2-lightest: #FFC4B3;
+    --primary-2-lightest: #FFE8E0;
+    --primary-2-warm: #FF6B35;
+    
+    /* ===== Boho Warm Neutrals ===== */
+    /* Тёплые нейтральные оттенки для бохо-стиля */
+    --boho-cream: #FDF8F5;
+    --boho-sand: #F5EDE6;
+    --boho-beige: #E8DDD4;
+    --boho-taupe: #C9B8A8;
+    --boho-brown: #8B7355;
+    --boho-clay: #B8956B;
+    --boho-terracotta: #CC7B5E;
+    --boho-rust: #A0522D;
     
     /* ===== Secondary Colors — Rostelecom Official Palette ===== */
-    /* Secondary 1 (Teal/Green) */
+    /* Secondary 1 (Teal/Green) — смягчённый */
     --secondary-1-day: #29CCA3;
     --secondary-1-night: #16D9A6;
     --secondary-1-light: #4AE5B8;
     --secondary-1-lighter: #7EEFD0;
-    --secondary-1-lightest: #B8F8E8;
+    --secondary-1-lightest: #E8F9F4;
     
-    /* Secondary 2 (Blue) */
+    /* Secondary 2 (Blue) — смягчённый */
     --secondary-2-day: #2F9AFF;
     --secondary-2-night: #40A2FF;
     --secondary-2-light: #5AADFF;
     --secondary-2-lighter: #85C2FF;
-    --secondary-2-lightest: #BDE0FF;
+    --secondary-2-lightest: #E8F2FF;
     
     /* ===== System UI Colors — Rostelecom Official Palette ===== */
-    /* Success (Green) */
+    /* Success (Green) — тёплый оттенок */
     --success-day: #00D359;
     --success-night: #26DA72;
     --success-light: #4AE58A;
-    --success-bg: #E6F9ED;
+    --success-bg: #F0F9F4;
     
-    /* Error (Red) */
+    /* Error (Red) — мягкий коралловый */
     --error-day: #FF0C0C;
     --error-night: #FF4747;
     --error-light: #FF6B6B;
-    --error-bg: #FFE6E6;
+    --error-bg: #FFF5F5;
     
-    /* Warning (Yellow/Amber) */
+    /* Warning (Yellow/Amber) — тёплый янтарь */
     --warning-day: #FFB608;
     --warning-night: #FFCA00;
     --warning-light: #FFD633;
-    --warning-bg: #FFF8E6;
+    --warning-bg: #FFFBF0;
     
-    /* Info (Blue) */
+    /* Info (Blue) — мягкий синий */
     --info-day: #0042ED;
     --info-night: #4075FF;
     --info-light: #6B91FF;
-    --info-bg: #E6EBFF;
+    --info-bg: #F0F4FF;
     
-    /* ===== Grayscale Palette — Rostelecom Official ===== */
-    --black: #101828;        /* 100% */
-    --grey-95: #1D2533;      /* 95% */
-    --grey-90: #272F3D;      /* 90% */
-    --grey-80: #3D4555;      /* 80% */
-    --grey-60: #797E8B;      /* 60% */
-    --grey-40: #B5B7C0;      /* 40% */
-    --grey-20: #D3D4DB;      /* 20% */
-    --grey-10: #E8E8EE;      /* 10% */
-    --grey-5: #F4F4F5;       /* 5% */
-    --white: #FFFFFF;        /* 0% */
+    /* ===== Warm Grayscale Palette ===== */
+    /* Тёплая серая шкала с бежевыми оттенками */
+    --black: #1A1614;
+    --grey-95: #2D2621;
+    --grey-90: #3D322B;
+    --grey-80: #5C4D41;
+    --grey-60: #8B7B6B;
+    --grey-40: #B5A595;
+    --grey-20: #D5C9BF;
+    --grey-10: #E8E0D9;
+    --grey-5: #F5F1EE;
+    --white: #FFFFFF;
+    
+    /* ===== Boho Background Patterns ===== */
+    --boho-pattern-dots: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%238B7355' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+    --boho-pattern-lines: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23B8956B' fill-opacity='0.08' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
     
     /* ===== Transparent Palette — For Light Theme ===== */
-    --transparent-100: rgba(16, 24, 40, 1);
-    --transparent-75: rgba(16, 24, 40, 0.7);
-    --transparent-50: rgba(16, 24, 40, 0.5);
-    --transparent-25: rgba(16, 24, 40, 0.25);
-    --transparent-10: rgba(16, 24, 40, 0.1);
-    --transparent-5: rgba(16, 24, 40, 0.05);
-    --transparent-3: rgba(16, 24, 40, 0.025);
+    --transparent-100: rgba(26, 22, 20, 1);
+    --transparent-75: rgba(26, 22, 20, 0.7);
+    --transparent-50: rgba(26, 22, 20, 0.5);
+    --transparent-25: rgba(26, 22, 20, 0.25);
+    --transparent-10: rgba(26, 22, 20, 0.1);
+    --transparent-5: rgba(26, 22, 20, 0.05);
+    --transparent-3: rgba(26, 22, 20, 0.025);
     
-    /* ===== Semantic Color Variables — Rostelecom IT Company Scheme ===== */
-    /* Primary: Purple — креативность, инновации, технологии */
-    --color-primary: var(--primary-1-day);
+    /* ===== Semantic Color Variables — Boho Warm Adaptation ===== */
+    /* Primary: Purple — креативность, инновации, с тёплым подтоном */
+    --color-primary: var(--primary-1-warm);
     --color-primary-hover: var(--primary-1-light);
     --color-primary-active: var(--primary-1-day);
     --color-primary-light: var(--primary-1-lightest);
     --color-primary-bg: var(--primary-1-lightest);
     --color-primary-night: var(--primary-1-night);
     
-    /* Secondary: Orange-Red — энергия, действие, CTA */
-    --color-secondary: var(--primary-2-day);
+    /* Secondary: Orange-Red — энергия, тепло, терракота */
+    --color-secondary: var(--primary-2-warm);
     --color-secondary-hover: var(--primary-2-light);
     --color-secondary-active: var(--primary-2-day);
     --color-secondary-light: var(--primary-2-lightest);
     --color-secondary-bg: var(--primary-2-lightest);
     --color-secondary-night: var(--primary-2-night);
     
-    /* Accent Colors */
+    /* Accent Colors — тёплые природные оттенки */
     --color-accent: var(--secondary-1-day);
     --color-accent-hover: var(--secondary-1-light);
     --color-accent-night: var(--secondary-1-night);
@@ -111,6 +130,12 @@
     --color-accent-2: var(--secondary-2-day);
     --color-accent-2-hover: var(--secondary-2-light);
     --color-accent-2-night: var(--secondary-2-night);
+    
+    /* Boho Accent Colors */
+    --color-boho-clay: var(--boho-clay);
+    --color-boho-terracotta: var(--boho-terracotta);
+    --color-boho-rust: var(--boho-rust);
+    --color-boho-sand: var(--boho-sand);
     
     /* Functional Colors */
     --color-success: var(--success-day);
@@ -129,16 +154,17 @@
     --color-info-bg: var(--info-bg);
     --color-info-day: var(--info-day);
     
-    /* Background Colors — Light Theme */
-    --color-bg-primary: var(--white);
-    --color-bg-secondary: var(--grey-5);
-    --color-bg-tertiary: var(--grey-10);
+    /* Background Colors — Warm Boho Theme */
+    --color-bg-primary: var(--boho-cream);
+    --color-bg-secondary: var(--boho-sand);
+    --color-bg-tertiary: var(--boho-beige);
     --color-bg-elevated: var(--white);
     --color-bg-inverse: var(--black);
     --color-bg-brand: var(--color-primary);
+    --color-bg-pattern: var(--boho-pattern-lines);
     
-    /* Text Colors — Light Theme */
-    --color-text-primary: var(--black);
+    /* Text Colors — Warm Tones */
+    --color-text-primary: var(--grey-90);
     --color-text-secondary: var(--grey-60);
     --color-text-tertiary: var(--grey-40);
     --color-text-inverse: var(--white);
@@ -146,12 +172,13 @@
     --color-text-link-hover: var(--color-primary-hover);
     --color-text-brand: var(--color-primary);
     
-    /* Border Colors — Light Theme */
-    --color-border-primary: var(--grey-20);
-    --color-border-secondary: var(--grey-10);
+    /* Border Colors — Warm Neutrals */
+    --color-border-primary: var(--boho-taupe);
+    --color-border-secondary: var(--boho-beige);
     --color-border-inverse: var(--grey-40);
     --color-border-brand: var(--color-primary);
     --color-border-focus: var(--color-primary);
+    --color-border-warm: var(--boho-clay);
     
     /* ===== Typography — Rostelecom System ===== */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -231,55 +258,62 @@
     --z-tooltip: 400;
 }
 
-/* ===== Dark Theme — Rostelecom IT Company Official Palette ===== */
+/* ===== Dark Theme — Rostelecom Boho Warm ===== */
 .theme-dark {
-    /* Background Colors — Dark Theme */
-    --color-bg-primary: var(--black);
-    --color-bg-secondary: var(--grey-95);
-    --color-bg-tertiary: var(--grey-90);
-    --color-bg-elevated: var(--grey-95);
+    /* Background Colors — Dark Boho Theme */
+    --color-bg-primary: #1A1614;
+    --color-bg-secondary: #2D2621;
+    --color-bg-tertiary: #3D322B;
+    --color-bg-elevated: #2D2621;
     
     /* Text Colors — Dark Theme */
-    --color-text-primary: var(--white);
-    --color-text-secondary: var(--grey-40);
-    --color-text-tertiary: var(--grey-60);
-    --color-text-link: var(--primary-1-night);
-    --color-text-link-hover: var(--primary-1-light);
+    --color-text-primary: #FDF8F5;
+    --color-text-secondary: #D5C9BF;
+    --color-text-tertiary: #B5A595;
+    --color-text-link: var(--primary-1-light);
+    --color-text-link-hover: var(--primary-1-lighter);
     
     /* Border Colors — Dark Theme */
-    --color-border-primary: var(--grey-80);
-    --color-border-secondary: var(--grey-90);
+    --color-border-primary: #5C4D41;
+    --color-border-secondary: #3D322B;
     
     /* Brand Colors — Dark Theme */
-    --color-primary: var(--primary-1-night);
-    --color-primary-hover: var(--primary-1-light);
-    --color-primary-light: rgba(148, 102, 255, 0.15);
-    --color-primary-bg: rgba(148, 102, 255, 0.1);
+    --color-primary: var(--primary-1-light);
+    --color-primary-hover: var(--primary-1-lighter);
+    --color-primary-light: rgba(148, 102, 255, 0.2);
+    --color-primary-bg: rgba(148, 102, 255, 0.15);
     
-    --color-secondary: var(--primary-2-night);
-    --color-secondary-hover: var(--primary-2-light);
-    --color-secondary-light: rgba(255, 94, 45, 0.15);
-    --color-secondary-bg: rgba(255, 94, 45, 0.1);
+    --color-secondary: var(--primary-2-light);
+    --color-secondary-hover: var(--primary-2-lighter);
+    --color-secondary-light: rgba(255, 122, 80, 0.2);
+    --color-secondary-bg: rgba(255, 122, 80, 0.15);
     
     /* Accent Colors — Dark Theme */
-    --color-accent: var(--secondary-1-night);
-    --color-accent-hover: var(--secondary-1-light);
+    --color-accent: var(--secondary-1-light);
+    --color-accent-hover: var(--secondary-1-lighter);
     
-    --color-accent-2: var(--secondary-2-night);
-    --color-accent-2-hover: var(--secondary-2-light);
+    --color-accent-2: var(--secondary-2-light);
+    --color-accent-2-hover: var(--secondary-2-lighter);
     
     /* Functional Colors — Dark Theme */
-    --color-success: var(--success-night);
-    --color-success-bg: rgba(38, 218, 114, 0.15);
+    --color-success: var(--success-light);
+    --color-success-bg: rgba(74, 229, 138, 0.2);
     
-    --color-error: var(--error-night);
-    --color-error-bg: rgba(255, 71, 71, 0.15);
+    --color-error: var(--error-light);
+    --color-error-bg: rgba(255, 107, 107, 0.2);
     
-    --color-warning: var(--warning-night);
-    --color-warning-bg: rgba(255, 202, 0, 0.15);
+    --color-warning: var(--warning-light);
+    --color-warning-bg: rgba(255, 214, 51, 0.2);
     
-    --color-info: var(--info-night);
-    --color-info-bg: rgba(64, 117, 255, 0.15);
+    --color-info: var(--info-light);
+    --color-info-bg: rgba(107, 145, 255, 0.2);
+    
+    /* Boho Colors — Dark Theme */
+    --boho-cream: #2D2621;
+    --boho-sand: #3D322B;
+    --boho-beige: #5C4D41;
+    --boho-taupe: #8B7B6B;
+    --boho-clay: #B8956B;
 }
 
 /* ===== Media Queries for Dark Theme ===== */
@@ -531,10 +565,16 @@ button {
 }
 
 /* ===================================
-   Hero Section
+   Hero Section — Boho Warm Style
    =================================== */
 .hero {
-    background: linear-gradient(135deg, var(--primary-1-day) 0%, var(--primary-1-day) 35%, var(--primary-1-night) 100%);
+    background: 
+        linear-gradient(135deg, 
+            rgba(119, 0, 255, 0.85) 0%, 
+            rgba(139, 92, 246, 0.8) 35%, 
+            rgba(148, 102, 255, 0.85) 100%
+        ),
+        var(--boho-pattern-lines);
     padding: var(--spacing-20) 0;
     color: white;
     position: relative;
@@ -549,9 +589,19 @@ button {
     width: 50%;
     height: 100%;
     background: 
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
-        radial-gradient(circle at 60% 80%, rgba(255, 79, 18, 0.15) 0%, transparent 50%);
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 60% 80%, rgba(255, 107, 53, 0.2) 0%, transparent 50%);
     animation: gradientShift 15s ease infinite;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to top, var(--color-bg-primary), transparent);
 }
 
 @keyframes gradientShift {
@@ -607,11 +657,12 @@ button {
 }
 
 /* ===================================
-   Categories Section
+   Categories Section — Boho Warm Style
    =================================== */
 .categories {
     padding: var(--spacing-16) 0;
     background: var(--color-bg-secondary);
+    background-image: var(--boho-pattern-dots);
 }
 
 .categories-grid {
@@ -623,11 +674,11 @@ button {
 .category-card {
     background: var(--color-bg-elevated);
     padding: var(--spacing-6);
-    border-radius: var(--radius-m);
-    box-shadow: var(--shadow-s);
+    border-radius: var(--radius-l);
+    box-shadow: 0 4px 6px rgba(139, 115, 85, 0.08);
     transition: all var(--transition-normal);
     text-align: center;
-    border: 1px solid var(--color-border-secondary);
+    border: 1px solid var(--boho-beige);
     position: relative;
     overflow: hidden;
 }
@@ -638,15 +689,19 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    height: 4px;
+    background: linear-gradient(90deg, 
+        var(--color-primary) 0%, 
+        var(--color-secondary) 50%, 
+        var(--color-primary) 100%
+    );
     transform: scaleX(0);
     transition: transform var(--transition-normal);
 }
 
 .category-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-l);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(139, 115, 85, 0.15);
     border-color: var(--color-primary);
 }
 
@@ -655,25 +710,28 @@ button {
 }
 
 .category-icon {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     margin: 0 auto var(--spacing-4);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-primary-bg);
-    border-radius: var(--radius-m);
+    background: linear-gradient(135deg, var(--boho-sand), var(--boho-beige));
+    border-radius: var(--radius-l);
     transition: all var(--transition-normal);
+    border: 2px solid var(--boho-taupe);
 }
 
 .category-card:hover .category-icon {
-    background: linear-gradient(135deg, var(--color-primary), var(--primary-1-night));
-    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    transform: scale(1.15) rotate(8deg);
+    border-color: transparent;
+    box-shadow: 0 8px 16px rgba(139, 92, 246, 0.3);
 }
 
 .category-icon svg {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     fill: var(--color-primary);
     transition: fill var(--transition-fast);
 }
@@ -697,7 +755,7 @@ button {
 }
 
 /* ===================================
-   Latest News Section
+   Latest News Section — Boho Warm Style
    =================================== */
 .latest-news {
     padding: var(--spacing-16) 0;
@@ -712,12 +770,13 @@ button {
 
 .news-card {
     background: var(--color-bg-elevated);
-    border: 1px solid var(--color-border-secondary);
-    border-radius: var(--radius-m);
+    border: 1px solid var(--boho-beige);
+    border-radius: var(--radius-l);
     padding: var(--spacing-6);
     transition: all var(--transition-normal);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 2px 4px rgba(139, 115, 85, 0.05);
 }
 
 .news-card::after {
@@ -726,16 +785,20 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    height: 4px;
+    background: linear-gradient(90deg, 
+        var(--color-primary) 0%, 
+        var(--color-secondary) 50%, 
+        var(--color-primary) 100%
+    );
     transform: scaleX(0);
     transition: transform var(--transition-normal);
 }
 
 .news-card:hover {
-    box-shadow: var(--shadow-l);
+    box-shadow: 0 12px 24px rgba(139, 115, 85, 0.12);
     border-color: var(--color-primary);
-    transform: translateY(-4px);
+    transform: translateY(-6px);
 }
 
 .news-card:hover::after {
@@ -750,9 +813,9 @@ button {
     color: var(--color-text-tertiary);
     margin-bottom: var(--spacing-3);
     padding: var(--spacing-1) var(--spacing-3);
-    background: var(--color-bg-tertiary);
+    background: linear-gradient(135deg, var(--boho-sand), var(--boho-beige));
     border-radius: var(--radius-full);
-    border: 1px solid var(--color-border-secondary);
+    border: 1px solid var(--boho-taupe);
 }
 
 .news-date svg {
@@ -807,10 +870,10 @@ button {
 }
 
 /* ===================================
-   Footer
+   Footer — Boho Warm Style
    =================================== */
 .footer {
-    background: var(--color-bg-inverse);
+    background: linear-gradient(180deg, var(--grey-90) 0%, var(--black) 100%);
     color: white;
     padding: var(--spacing-12) 0 var(--spacing-8);
     margin-top: auto;
@@ -824,13 +887,28 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
+    height: 6px;
     background: linear-gradient(90deg, 
         var(--color-primary) 0%, 
-        var(--primary-1-night) 25%, 
-        var(--color-secondary) 50%, 
-        var(--primary-2-night) 75%, 
-        var(--color-primary) 100%);
+        var(--color-secondary) 25%, 
+        var(--color-primary) 50%, 
+        var(--color-secondary) 75%, 
+        var(--color-primary) 100%
+    );
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease infinite;
+}
+
+.footer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--boho-pattern-dots);
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 .footer-content {
