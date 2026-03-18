@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кадровое администрирование — HR News Russia</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">HR News Russia</span>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Главная</a>
+                    <a href="recruitment.html" class="nav-link">Подбор персонала</a>
+                    <a href="adaptation.html" class="nav-link">Адаптация</a>
+                    <a href="training.html" class="nav-link">Обучение</a>
+                    <a href="development.html" class="nav-link">Развитие</a>
+                    <a href="hr-admin.html" class="nav-link active">Кадровое администрирование</a>
+                    <a href="hr-bp.html" class="nav-link">HR BP</a>
+                </nav>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                        <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" aria-label="Меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <li><a href="../index.html">Главная</a></li>
+                <li>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                </li>
+                <li>Кадровое администрирование</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Кадровое администрирование</h1>
+            <p class="page-description">Документооборот, compliance, HR-метрики и отчётность в ИТ-компаниях России</p>
+        </div>
+    </section>
+
+    <!-- Page Content -->
+    <section class="page-content">
+        <div class="container">
+            <div class="articles-list">
+                <article class="article-card animate-fade-in-up">
+                    <div class="article-meta">
+                        <span class="article-category">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                            </svg>
+                            Кадровое администрирование
+                        </span>
+                        <span class="article-date">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                            </svg>
+                            15 марта 2026
+                        </span>
+                    </div>
+                    <h2 class="article-title">Цифровизация кадрового документооборота: новые требования 2026</h2>
+                    <p class="article-excerpt">Изменения в законодательстве упрощают переход на электронные трудовые книжки. Разбираем новые требования к системам электронного документооборота и порядок перехода на цифровые процессы.</p>
+                    <div class="article-tags">
+                        <span class="article-tag">Документооборот</span>
+                        <span class="article-tag">Законодательство</span>
+                        <span class="article-tag">Цифровизация</span>
+                    </div>
+                </article>
+
+                <article class="article-card animate-fade-in-up">
+                    <div class="article-meta">
+                        <span class="article-category">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                            </svg>
+                            Кадровое администрирование
+                        </span>
+                        <span class="article-date">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                            </svg>
+                            8 марта 2026
+                        </span>
+                    </div>
+                    <h2 class="article-title">HR-аналитика: ключевые метрики для ИТ-компаний</h2>
+                    <p class="article-excerpt">Time-to-hire, cost-per-hire, retention rate, eNPS — полный гид по метрикам для оценки эффективности HR-процессов. Как собирать данные, строить дашборды и презентовать результаты бизнесу.</p>
+                    <div class="article-tags">
+                        <span class="article-tag">Аналитика</span>
+                        <span class="article-tag">Метрики</span>
+                        <span class="article-tag">Дашборды</span>
+                    </div>
+                </article>
+
+                <article class="article-card animate-fade-in-up">
+                    <div class="article-meta">
+                        <span class="article-category">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                            </svg>
+                            Кадровое администрирование
+                        </span>
+                        <span class="article-date">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                            </svg>
+                            1 марта 2026
+                        </span>
+                    </div>
+                    <h2 class="article-title">Трудовое законодательство 2026: изменения для ИТ-отрасли</h2>
+                    <p class="article-excerpt">Обзор изменений в ТК РФ, влияющих на работу ИТ-компаний. Новые правила оформления удалённой работы, особенности регулирования труда программистов и льготы для аккредитованных компаний.</p>
+                    <div class="article-tags">
+                        <span class="article-tag">Законодательство</span>
+                        <span class="article-tag">ТК РФ</span>
+                        <span class="article-tag">ИТ-льготы</span>
+                    </div>
+                </article>
+
+                <article class="article-card animate-fade-in-up">
+                    <div class="article-meta">
+                        <span class="article-category">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                            </svg>
+                            Кадровое администрирование
+                        </span>
+                        <span class="article-date">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                            </svg>
+                            23 февраля 2026
+                        </span>
+                    </div>
+                    <h2 class="article-title">Аудит кадрового делопроизводства: чек-лист проверки</h2>
+                    <p class="article-excerpt">Как подготовиться к проверке трудовой инспекции и минимизировать риски штрафов. Разбираем типичные ошибки в кадровых документах и способы их исправления.</p>
+                    <div class="article-tags">
+                        <span class="article-tag">Аудит</span>
+                        <span class="article-tag">Compliance</span>
+                        <span class="article-tag">Проверки</span>
+                    </div>
+                </article>
+
+                <article class="article-card animate-fade-in-up">
+                    <div class="article-meta">
+                        <span class="article-category">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                            </svg>
+                            Кадровое администрирование
+                        </span>
+                        <span class="article-date">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                            </svg>
+                            16 февраля 2026
+                        </span>
+                    </div>
+                    <h2 class="article-title">Системы мотивации в ИТ: от оклада к комплексному подходу</h2>
+                    <p class="article-excerpt">Обзор практик компенсации и льгот в российских ИТ-компаниях. ДМС, обучение, опционы, гибкий график — как формировать конкурентный пакет для привлечения и удержания талантов.</p>
+                    <div class="article-tags">
+                        <span class="article-tag">Мотивация</span>
+                        <span class="article-tag">Компенсации</span>
+                        <span class="article-tag">Benefits</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>HR News Russia</h4>
+                    <p>Ваш источник новостей о HR в ИТ-сфере России</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="recruitment.html">Подбор персонала</a></li>
+                        <li><a href="adaptation.html">Адаптация</a></li>
+                        <li><a href="training.html">Обучение</a></li>
+                        <li><a href="development.html">Развитие</a></li>
+                        <li><a href="hr-admin.html">Кадровое администрирование</a></li>
+                        <li><a href="hr-bp.html">HR BP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>info@hrnews.ru</p>
+                    <p>Москва, Россия</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HR News Russia. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>
