@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мировые HR-исследования — HR News Russia</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">HR News Russia</span>
+                </div>
+                <nav class="nav">
+                    <a href="../index.html" class="nav-link">Главная</a>
+                    <a href="recruitment.html" class="nav-link">Подбор персонала</a>
+                    <a href="adaptation.html" class="nav-link">Адаптация</a>
+                    <a href="training.html" class="nav-link">Обучение</a>
+                    <a href="development.html" class="nav-link">Развитие</a>
+                    <a href="hr-admin.html" class="nav-link">Кадровое администрирование</a>
+                    <a href="hr-bp.html" class="nav-link">HR BP</a>
+                    <a href="research.html" class="nav-link active">Мировые исследования</a>
+                </nav>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+                        <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" aria-label="Меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ul class="breadcrumbs-list">
+                <li><a href="../index.html">Главная</a></li>
+                <li>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                    </svg>
+                </li>
+                <li>Мировые исследования</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Мировые HR-исследования</h1>
+            <p class="page-description">Переводы и обзоры ключевых международных исследований в области управления персоналом</p>
+        </div>
+    </section>
+
+    <!-- Topic Filter -->
+    <section class="research-filter">
+        <div class="container">
+            <div class="filter-tabs" id="researchFilter">
+                <button class="filter-tab active" data-filter="all">Все исследования</button>
+                <button class="filter-tab" data-filter="recruitment">📋 Рекрутмент</button>
+                <button class="filter-tab" data-filter="engagement">💡 Вовлечённость</button>
+                <button class="filter-tab" data-filter="learning">📚 Обучение</button>
+                <button class="filter-tab" data-filter="leadership">🎯 Лидерство</button>
+                <button class="filter-tab" data-filter="wellbeing">🧘 Благополучие</button>
+                <button class="filter-tab" data-filter="future">🔮 Будущее работы</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Content -->
+    <section class="page-content">
+        <div class="container">
+            <!-- Recruitment Research -->
+            <div class="research-category" data-category="recruitment">
+                <h2 class="research-category-title">
+                    <span class="category-icon">📋</span>
+                    Рекрутмент и найм
+                </h2>
+                
+                <div class="research-grid">
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">LinkedIn Talent Solutions</span>
+                            <span class="research-year">2025</span>
+                        </div>
+                        <h3 class="research-title">Global Talent Trends 2025</h3>
+                        <p class="research-excerpt">Ежегодное исследование тенденций найма с охватом 40+ стран. Анализ изменений в поведении соискателей, влияния ИИ на процесс отбора и новых ожиданий кандидатов.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>73% кандидатов prioritise гибкий график над зарплатой</li>
+                                <li>Компании, использующие AI в скрининге, сократили time-to-hire на 40%</li>
+                                <li>67% миллениалов готовы сменить работу ради лучших benefits</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">Harvard Business Review</span>
+                            <span class="research-year">2025</span>
+                        </div>
+                        <h3 class="research-title">The Future of Recruiting: AI and Beyond</h3>
+                        <p class="research-excerpt">Исследование о трансформации рекрутмента под влиянием искусственного интеллекта. Практические кейсы внедрения AI-инструментов в крупнейших компаниях.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>AI-скрининг снижает bias на 35% по сравнению с традиционным отбором</li>
+                                <li>Видео-интервью с AI-анализом увеличивают конверсию на 28%</li>
+                                <li>85% рекрутеров планируют увеличить инвестиции в AI-инструменты</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">McKinsey & Company</span>
+                            <span class="research-year">2024</span>
+                        </div>
+                        <h3 class="research-title">Winning the War for Talent in the Digital Age</h3>
+                        <p class="research-excerpt">Глобальное исследование о конкуренции за таланты в цифровую эпоху. Анализ стратегий привлечения и удержания лучших специалистов.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>Персонализированный candidate experience увеличивает acceptance rate на 45%</li>
+                                <li>Компании с сильным employer brand получают на 50% больше качественных откликов</li>
+                                <li>Средняя стоимость найма senior-специалиста выросла на 32% за 3 года</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Engagement Research -->
+            <div class="research-category" data-category="engagement">
+                <h2 class="research-category-title">
+                    <span class="category-icon">💡</span>
+                    Вовлечённость сотрудников
+                </h2>
+                
+                <div class="research-grid">
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">Gallup</span>
+                            <span class="research-year">2025</span>
+                        </div>
+                        <h3 class="research-title">State of the Global Workplace 2025</h3>
+                        <p class="research-excerpt">Масштабное исследование вовлечённости сотрудников в 160 странах. Данные о влиянии вовлечённости на продуктивность, удержание и бизнес-результаты.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>Только 23% сотрудников вовлечены в работу глобально</li>
+                                <li>Команды с высокой вовлечённостью показывают на 23% выше прибыльность</li>
+                                <li>Регулярная обратная связь увеличивает вовлечённость на 67%</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">Deloitte</span>
+                            <span class="research-year">2025</span>
+                        </div>
+                        <h3 class="research-title">Global Human Capital Trends: The Social Enterprise</h3>
+                        <p class="research-excerpt">Исследование о трансформации корпоративной культуры и роли социального предприятия в современном бизнесе.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>88% сотрудников считают purpose компании важным фактором лояльности</li>
+                                <li>Организации с сильной культурой в 4 раза чаще превосходят финансовые цели</li>
+                                <li>Wellbeing-программы снижают текучесть на 25%</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Learning Research -->
+            <div class="research-category" data-category="learning">
+                <h2 class="research-category-title">
+                    <span class="category-icon">📚</span>
+                    Обучение и развитие
+                </h2>
+                
+                <div class="research-grid">
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">ATD (Association for Talent Development)</span>
+                            <span class="research-year">2025</span>
+                        </div>
+                        <h3 class="research-title">State of the Industry 2025</h3>
+                        <p class="research-excerpt">Ежегодный отчёт о состоянии корпоративного обучения. Данные о бюджетах, методах и эффективности обучающих программ.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>Средние инвестиции в обучение: $1,280 на сотрудника в год</li>
+                                <li>Microlearning показывает на 50% лучшую усвояемость материала</li>
+                                <li>70% компаний увеличили бюджеты на digital learning</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">PwC</span>
+                            <span class="research-year">2025</span>
+                        </div>
+                        <h3 class="research-title">Workforce of the Future: Upskilling for the Digital Economy</h3>
+                        <p class="research-excerpt">Исследование о необходимых навыках для цифровой экономики и стратегиях upskilling/reskilling.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>К 2030 году 30% текущих навыков устареют</li>
+                                <li>Инвестиции в upskilling окупаются за 18 месяцев</li>
+                                <li>76% сотрудников готовы учиться новому для сохранения работы</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Leadership Research -->
+            <div class="research-category" data-category="leadership">
+                <h2 class="research-category-title">
+                    <span class="category-icon">🎯</span>
+                    Лидерство и управление
+                </h2>
+                
+                <div class="research-grid">
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">Center for Creative Leadership</span>
+                            <span class="research-year">2025</span>
+                        </div>
+                        <h3 class="research-title">Leadership Development in the Post-Pandemic Era</h3>
+                        <p class="research-excerpt">Исследование о трансформации лидерских компетенций после пандемии. Новые требования к лидерам в условиях неопределённости.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>Emotional intelligence — #1 компетенция для лидеров 2025</li>
+                                <li>68% миллениалов уйдут от руководителя с низким EQ</li>
+                                <li>Адаптивное лидерство увеличивает retention на 42%</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">MIT Sloan Management Review</span>
+                            <span class="research-year">2024</span>
+                        </div>
+                        <h3 class="research-title">Leading in the Age of AI</h3>
+                        <p class="research-excerpt">Как искусственный интеллект меняет роль лидеров и какие новые навыки необходимы для управления в эпоху автоматизации.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>Лидеры, использующие AI-инструменты, принимают решения на 37% быстрее</li>
+                                <li>55% руководителей не готовы к управлению AI-командами</li>
+                                <li>Data literacy становится обязательным навыком для всех лидеров</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Wellbeing Research -->
+            <div class="research-category" data-category="wellbeing">
+                <h2 class="research-category-title">
+                    <span class="category-icon">🧘</span>
+                    Благополучие и ментальное здоровье
+                </h2>
+                
+                <div class="research-grid">
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">WHO (World Health Organization)</span>
+                            <span class="research-year">2025</span>
+                        </div>
+                        <h3 class="research-title">Mental Health in the Workplace: Global Guidelines</h3>
+                        <p class="research-excerpt">Глобальные рекомендации ВОЗ по охране ментального здоровья на рабочих местах. Стратегии профилактики и поддержки сотрудников.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>Депрессия и тревожность стоят экономике $1 трлн ежегодно</li>
+                                <li>Каждый $1 инвестированный в ментальное здоровье приносит $4 ROI</li>
+                                <li>43% сотрудников испытывают хронический стресс на работе</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">Mind Share Partners</span>
+                            <span class="research-year">2025</span>
+                        </div>
+                        <h3 class="research-title">Mental Health at Work Report</h3>
+                        <p class="research-excerpt">Исследование о влиянии рабочей среды на ментальное здоровье сотрудников. Рекомендации по созданию поддерживающей культуры.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>69% сотрудников испытывают выгорание</li>
+                                <li>Компании с mental health программами имеют на 31% ниже текучесть</li>
+                                <li>Только 34% сотрудников чувствуют комфорт, обсуждая ментальное здоровье</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Future of Work Research -->
+            <div class="research-category" data-category="future">
+                <h2 class="research-category-title">
+                    <span class="category-icon">🔮</span>
+                    Будущее работы
+                </h2>
+                
+                <div class="research-grid">
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">World Economic Forum</span>
+                            <span class="research-year">2025</span>
+                        </div>
+                        <h3 class="research-title">The Future of Jobs Report 2025</h3>
+                        <p class="research-excerpt">Прогноз изменений на рынке труда до 2030 года. Анализ исчезающих и появляющихся профессий, необходимых навыков будущего.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>85 миллионов рабочих мест исчезнут к 2030</li>
+                                <li>97 миллионов новых ролей появятся благодаря автоматизации</li>
+                                <li>Critical thinking и creativity — топ навыки 2030</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+
+                    <article class="research-card hover-lift scroll-animate">
+                        <div class="research-meta">
+                            <span class="research-source">Gartner</span>
+                            <span class="research-year">2025</span>
+                        </div>
+                        <h3 class="research-title">Future of Work: Hybrid Work Models</h3>
+                        <p class="research-excerpt">Исследование о гибридных моделях работы и их влиянии на продуктивность, вовлечённость и корпоративную культуру.</p>
+                        <div class="research-highlights">
+                            <h4>Ключевые выводы:</h4>
+                            <ul>
+                                <li>Гибридные команды на 22% продуктивнее полностью офисных</li>
+                                <li>78% сотрудников хотят сохранить гибкий график после пандемии</li>
+                                <li>Компании с flexible work policies привлекают на 40% больше талантов</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="research-link">
+                            Читать перевод
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>HR News Russia</h4>
+                    <p>Ваш источник новостей о HR в ИТ-сфере России</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="recruitment.html">Подбор персонала</a></li>
+                        <li><a href="adaptation.html">Адаптация</a></li>
+                        <li><a href="training.html">Обучение</a></li>
+                        <li><a href="development.html">Развитие</a></li>
+                        <li><a href="hr-admin.html">Кадровое администрирование</a></li>
+                        <li><a href="hr-bp.html">HR BP</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>info@hrnews.ru</p>
+                    <p>Москва, Россия</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HR News Russia. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="../scripts/research-filter.js"></script>
+</body>
+</html>

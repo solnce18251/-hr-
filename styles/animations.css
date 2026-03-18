@@ -669,6 +669,259 @@
 }
 
 /* ===================================
+   Research Section Animations
+   =================================== */
+
+/* Filter Tabs Animation */
+.filter-tabs {
+    display: flex;
+    gap: var(--spacing-2);
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: var(--spacing-6) 0;
+}
+
+.filter-tab {
+    padding: var(--spacing-3) var(--spacing-5);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    white-space: nowrap;
+}
+
+.filter-tab:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(119, 0, 255, 0.15);
+}
+
+.filter-tab.active {
+    background: linear-gradient(135deg, var(--color-primary), var(--primary-1-night));
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(119, 0, 255, 0.3);
+}
+
+/* Research Category Title */
+.research-category-title {
+    font-size: var(--font-size-title-1);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin: var(--spacing-12) 0 var(--spacing-6);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+}
+
+.research-category-title .category-icon {
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Research Grid */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-6);
+}
+
+/* Research Card */
+.research-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-secondary);
+    border-radius: var(--radius-m);
+    padding: var(--spacing-6);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.research-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    transition: height 0.4s ease;
+}
+
+.research-card:hover::before {
+    height: 100%;
+}
+
+.research-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 40px rgba(119, 0, 255, 0.15);
+}
+
+/* Research Meta */
+.research-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-3);
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+}
+
+.research-source {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    padding: var(--spacing-1) var(--spacing-3);
+    background: var(--color-primary-bg);
+    border-radius: var(--radius-full);
+}
+
+.research-year {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-tertiary);
+    padding: var(--spacing-1) var(--spacing-3);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-full);
+}
+
+/* Research Title */
+.research-title {
+    font-size: var(--font-size-title-3);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-3);
+    line-height: var(--line-height-tight);
+    transition: color 0.3s ease;
+}
+
+.research-card:hover .research-title {
+    color: var(--color-primary);
+}
+
+/* Research Excerpt */
+.research-excerpt {
+    font-size: var(--font-size-body);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-4);
+}
+
+/* Research Highlights */
+.research-highlights {
+    background: var(--color-bg-secondary);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-s);
+    margin-bottom: var(--spacing-4);
+    border-left: 3px solid var(--color-accent);
+}
+
+.research-highlights h4 {
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-2);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+.research-highlights ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.research-highlights li {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    padding: var(--spacing-2) 0;
+    padding-left: var(--spacing-4);
+    position: relative;
+    line-height: var(--line-height-relaxed);
+}
+
+.research-highlights li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-success);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Research Link */
+.research-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.research-link svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.research-link:hover {
+    color: var(--color-primary-hover);
+    gap: 12px;
+}
+
+.research-link:hover svg {
+    transform: translateX(6px);
+}
+
+/* Research Card Entrance Animation */
+.research-category {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.research-category.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Research Filter Section */
+.research-filter {
+    background: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border-secondary);
+    padding: var(--spacing-6) 0;
+}
+
+/* Responsive Research Grid */
+@media (max-width: 768px) {
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-tabs {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: var(--spacing-4);
+    }
+    
+    .filter-tab {
+        flex-shrink: 0;
+    }
+}
+
+/* ===================================
    Article Card Animations
    =================================== */
 
