@@ -101,7 +101,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // ===== Scroll Animations (Intersection Observer) =====
+    // ===== Scroll Animations for News Cards =====
+    const newsCards = document.querySelectorAll('.news-card');
+    
+    const newsCardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, index * 100);
+                newsCardObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    
+    newsCards.forEach(card => {
+        newsCardObserver.observe(card);
+    });
+    
+    // ===== Scroll Animations for Sections =====
     const scrollElements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right');
     
     const elementInView = (el, dividend = 1) => {
@@ -111,10 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const displayScrollElement = (element) => {
         element.classList.add('active', 'visible');
-    };
-    
-    const hideScrollElement = (element) => {
-        element.classList.remove('active', 'visible');
     };
     
     const handleScrollAnimation = () => {
@@ -133,27 +150,23 @@ document.addEventListener('DOMContentLoaded', function() {
         handleScrollAnimation();
     });
     
-    // ===== Intersection Observer for Cards =====
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    // ===== Intersection Observer for Category Cards =====
+    const categoryCards = document.querySelectorAll('.category-card');
     
-    const observer = new IntersectionObserver(function(entries) {
+    const categoryObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
     
-    // Observe cards for scroll animation
-    document.querySelectorAll('.category-card, .news-card, .article-card').forEach(function(card) {
+    categoryCards.forEach(function(card) {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
         card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        observer.observe(card);
+        categoryObserver.observe(card);
     });
     
     // ===== Ripple Effect for Buttons =====
@@ -179,6 +192,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // ===== Mark Fresh News (Today/Yesterday) =====
+    function markFreshNews() {
+        const today = new Date();
+        const yesterday = new Date(today);
+        yesterday.setDate(yesterday.getDate() - 1);
+        
+        const monthNames = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+                           'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+        
+        newsCards.forEach(card => {
+            const dateElement = card.querySelector('.news-date');
+            if (!dateElement) return;
+            
+            const dateText = dateElement.textContent.trim();
+            const day = parseInt(dateText.split(' ')[0]);
+            const monthName = dateText.split(' ')[1];
+            const monthIndex = monthNames.indexOf(monthName);
+            
+            if (monthIndex !== -1) {
+                const cardDate = new Date(today.getFullYear(), monthIndex, day);
+                
+                // Check if today or yesterday
+                const isToday = cardDate.toDateString() === today.toDateString();
+                const isYesterday = cardDate.toDateString() === yesterday.toDateString();
+                
+                if (isToday || isYesterday) {
+                    dateElement.classList.add('fresh');
+                    dateElement.setAttribute('title', isToday ? 'Сегодня' : 'Вчера');
+                }
+            }
+        });
+    }
+    
+    markFreshNews();
+    
     // ===== Parallax Effect for Hero =====
     const hero = document.querySelector('.hero');
     if (hero) {
@@ -203,32 +251,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ===== Add Loading Animation to Page =====
+    // ===== Add Loading Class to Page =====
     window.addEventListener('load', function() {
         document.body.classList.add('loaded');
-        
-        // Trigger entrance animations
-        setTimeout(() => {
-            document.querySelectorAll('.animate-fade-in-up').forEach((el, index) => {
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                }, index * 100);
-            });
-        }, 100);
     });
-    
-    // ===== Performance: Debounce Scroll Events =====
-    function debounce(func, wait) {
-        let timeout;
-        return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
-            clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
-        };
-    }
     
     // ===== Add Visible Class to Sections on Scroll =====
     const sections = document.querySelectorAll('section');
