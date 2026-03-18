@@ -278,13 +278,25 @@ document.addEventListener('DOMContentLoaded', function() {
     if (logo) {
         logo.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation();
+            
             const logoIcon = this.querySelector('.logo-icon');
             logoIcon.style.animation = 'bounceIn 0.6s ease-out';
             
+            // Determine correct path based on current location
+            const currentPath = window.location.pathname;
+            let targetPath = 'index.html';
+            
+            if (currentPath.includes('/pages/')) {
+                targetPath = '../index.html';
+            }
+            
             setTimeout(() => {
-                window.location.href = 'index.html';
+                window.location.href = targetPath;
             }, 300);
         });
+        
+        logo.style.cursor = 'pointer';
     }
     
     // ===== Tooltip for Theme Toggle =====
