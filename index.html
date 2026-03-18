@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HR News Russia — Новости HR в ИТ</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -51,20 +52,20 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero scroll-animate">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Новости HR в ИТ-сфере России</h1>
-                <p class="hero-subtitle">Актуальная информация о подборе персонала, адаптации, обучении и развитии команд в технологических компаниях</p>
+                <h1 class="hero-title animate-fade-in-up">Новости HR в ИТ-сфере России</h1>
+                <p class="hero-subtitle animate-fade-in-up">Актуальная информация о подборе персонала, адаптации, обучении и развитии команд в технологических компаниях</p>
             </div>
         </div>
     </section>
 
     <!-- Categories Grid -->
-    <section class="categories">
+    <section class="categories scroll-animate">
         <div class="container">
-            <h2 class="section-title">Разделы</h2>
-            <div class="categories-grid stagger-animation">
+            <h2 class="section-title animate-fade-in-left">Разделы</h2>
+            <div class="categories-grid grid-stagger">
                 <a href="pages/recruitment.html" class="category-card">
                     <div class="category-icon">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -124,18 +125,18 @@
     </section>
 
     <!-- Latest News -->
-    <section class="latest-news">
+    <section class="latest-news scroll-animate">
         <div class="container">
-            <h2 class="section-title">Последние новости</h2>
-            <div class="news-grid stagger-animation">
-                <article class="news-card animate-fade-in-up">
+            <h2 class="section-title animate-fade-in-left">Последние новости</h2>
+            <div class="news-grid grid-stagger">
+                <article class="news-card hover-lift">
                     <div class="news-date">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
                         </svg>
                         19 марта 2026
                     </div>
-                    <h3 class="news-title">Рынок ИТ-рекрутмента в России показал рост на 15% в первом квартале</h3>
+                    <h3 class="news-title hover-text-gradient">Рынок ИТ-рекрутмента в России показал рост на 15% в первом квартале</h3>
                     <p class="news-excerpt">Компании увеличивают бюджеты на подбор специалистов в условиях дефицита кадров...</p>
                     <a href="pages/recruitment.html" class="news-link">
                         Читать далее
@@ -144,14 +145,14 @@
                         </svg>
                     </a>
                 </article>
-                <article class="news-card animate-fade-in-up">
+                <article class="news-card hover-lift">
                     <div class="news-date">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
                         </svg>
                         18 марта 2026
                     </div>
-                    <h3 class="news-title">Новые подходы к онбордингу: опыт ведущих ИТ-компаний</h3>
+                    <h3 class="news-title hover-text-gradient">Новые подходы к онбордингу: опыт ведущих ИТ-компаний</h3>
                     <p class="news-excerpt">Исследование показало эффективность программ менторства в первые 90 дней работы...</p>
                     <a href="pages/adaptation.html" class="news-link">
                         Читать далее
@@ -160,14 +161,14 @@
                         </svg>
                     </a>
                 </article>
-                <article class="news-card animate-fade-in-up">
+                <article class="news-card hover-lift">
                     <div class="news-date">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
                         </svg>
                         17 марта 2026
                     </div>
-                    <h3 class="news-title">Обучение без отрыва от производства: тренды 2026 года</h3>
+                    <h3 class="news-title hover-text-gradient">Обучение без отрыва от производства: тренды 2026 года</h3>
                     <p class="news-excerpt">Микрообучение и AI-платформы становятся стандартом в корпоративном образовании...</p>
                     <a href="pages/training.html" class="news-link">
                         Читать далее
@@ -176,14 +177,14 @@
                         </svg>
                     </a>
                 </article>
-                <article class="news-card animate-fade-in-up">
+                <article class="news-card hover-lift">
                     <div class="news-date">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
                         </svg>
                         16 марта 2026
                     </div>
-                    <h3 class="news-title">HR-директора обсуждают новые модели карьерного развития</h3>
+                    <h3 class="news-title hover-text-gradient">HR-директора обсуждают новые модели карьерного развития</h3>
                     <p class="news-excerpt">Горизонтальная карьера и проектный подход набирают популярность в ИТ-секторе...</p>
                     <a href="pages/development.html" class="news-link">
                         Читать далее
@@ -192,14 +193,14 @@
                         </svg>
                     </a>
                 </article>
-                <article class="news-card animate-fade-in-up">
+                <article class="news-card hover-lift">
                     <div class="news-date">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
                         </svg>
                         15 марта 2026
                     </div>
-                    <h3 class="news-title">Цифровизация кадрового документооборота: новые требования 2026</h3>
+                    <h3 class="news-title hover-text-gradient">Цифровизация кадрового документооборота: новые требования 2026</h3>
                     <p class="news-excerpt">Изменения в законодательстве упрощают переход на электронные трудовые книжки...</p>
                     <a href="pages/hr-admin.html" class="news-link">
                         Читать далее
@@ -208,14 +209,14 @@
                         </svg>
                     </a>
                 </article>
-                <article class="news-card animate-fade-in-up">
+                <article class="news-card hover-lift">
                     <div class="news-date">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
                         </svg>
                         14 марта 2026
                     </div>
-                    <h3 class="news-title">Роль HR BP в трансформации бизнеса: кейсы российских компаний</h3>
+                    <h3 class="news-title hover-text-gradient">Роль HR BP в трансформации бизнеса: кейсы российских компаний</h3>
                     <p class="news-excerpt">Как HR-партнёры влияют на стратегические решения и рост прибыли...</p>
                     <a href="pages/hr-bp.html" class="news-link">
                         Читать далее

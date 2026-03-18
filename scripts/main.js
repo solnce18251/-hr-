@@ -1,5 +1,10 @@
-// Theme Toggle
+// ===================================
+// HR News Russia — Main JavaScript
+// With Advanced Animations
+// ===================================
+
 document.addEventListener('DOMContentLoaded', function() {
+    // ===== Theme Toggle =====
     const themeToggle = document.getElementById('themeToggle');
     const sunIcon = themeToggle?.querySelector('.sun-icon');
     const moonIcon = themeToggle?.querySelector('.moon-icon');
@@ -33,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Mobile Menu Toggle
+    // ===== Mobile Menu Toggle =====
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const nav = document.querySelector('.nav');
     
@@ -71,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Smooth scroll for anchor links
+    // ===== Smooth Scroll for Anchor Links =====
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -87,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add active class to current page nav link
+    // ===== Active Nav Link =====
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     navLinks.forEach(function(link) {
         const href = link.getAttribute('href');
@@ -96,7 +101,39 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Intersection Observer for scroll animations
+    // ===== Scroll Animations (Intersection Observer) =====
+    const scrollElements = document.querySelectorAll('.scroll-animate, .scroll-animate-left, .scroll-animate-right');
+    
+    const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend);
+    };
+    
+    const displayScrollElement = (element) => {
+        element.classList.add('active', 'visible');
+    };
+    
+    const hideScrollElement = (element) => {
+        element.classList.remove('active', 'visible');
+    };
+    
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 1.25)) {
+                displayScrollElement(el);
+            }
+        });
+    };
+    
+    // Initial check
+    handleScrollAnimation();
+    
+    // Scroll event listener
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+    
+    // ===== Intersection Observer for Cards =====
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -119,10 +156,117 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
     
-    // Add hover effect sound (optional, subtle feedback)
-    document.querySelectorAll('.btn, .category-card, .news-card').forEach(function(element) {
-        element.addEventListener('mouseenter', function() {
-            this.style.transition = 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)';
+    // ===== Ripple Effect for Buttons =====
+    document.querySelectorAll('.btn').forEach(button => {
+        button.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            
+            button.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
         });
     });
+    
+    // ===== Parallax Effect for Hero =====
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const heroHeight = hero.offsetHeight;
+            
+            if (scrolled < heroHeight) {
+                hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+            }
+        });
+    }
+    
+    // ===== Hover Effect for Category Cards =====
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.zIndex = '10';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.zIndex = '1';
+        });
+    });
+    
+    // ===== Add Loading Animation to Page =====
+    window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
+        
+        // Trigger entrance animations
+        setTimeout(() => {
+            document.querySelectorAll('.animate-fade-in-up').forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                }, index * 100);
+            });
+        }, 100);
+    });
+    
+    // ===== Performance: Debounce Scroll Events =====
+    function debounce(func, wait) {
+        let timeout;
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(timeout);
+                func(...args);
+            };
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+        };
+    }
+    
+    // ===== Add Visible Class to Sections on Scroll =====
+    const sections = document.querySelectorAll('section');
+    
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+    
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+    
+    // ===== Logo Animation on Click =====
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.addEventListener('click', function(e) {
+            e.preventDefault();
+            const logoIcon = this.querySelector('.logo-icon');
+            logoIcon.style.animation = 'bounceIn 0.6s ease-out';
+            
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 300);
+        });
+    }
+    
+    // ===== Tooltip for Theme Toggle =====
+    if (themeToggle) {
+        themeToggle.setAttribute('title', 'Переключить тему');
+    }
+    
+    // ===== Console Easter Egg =====
+    console.log('%c👋 HR News Russia', 'font-size: 24px; font-weight: bold; color: #7700FF;');
+    console.log('%cBuilt with Rostelecom Design System', 'font-size: 12px; color: #666;');
 });
