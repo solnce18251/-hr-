@@ -23,17 +23,19 @@
                     </div>
                     <span class="logo-text">HR News Russia</span>
                 </div>
-                <nav class="nav">
-                    <a href="index.html" class="nav-link active">Главная</a>
-                    <a href="pages/recruitment.html" class="nav-link">Подбор персонала</a>
-                    <a href="pages/adaptation.html" class="nav-link">Адаптация</a>
-                    <a href="pages/training.html" class="nav-link">Обучение</a>
-                    <a href="pages/development.html" class="nav-link">Развитие</a>
-                    <a href="pages/hr-admin.html" class="nav-link">Кадровое администрирование</a>
-                    <a href="pages/hr-bp.html" class="nav-link">HR BP</a>
-                    <a href="pages/research.html" class="nav-link">Мировые исследования</a>
-                    <a href="pages/ru-research.html" class="nav-link">Российские исследования</a>
-                </nav>
+                <div class="nav-wrapper">
+                    <nav class="nav">
+                        <a href="index.html" class="nav-link active">Главная</a>
+                        <a href="pages/recruitment.html" class="nav-link">Подбор</a>
+                        <a href="pages/adaptation.html" class="nav-link">Адаптация</a>
+                        <a href="pages/training.html" class="nav-link">Обучение</a>
+                        <a href="pages/development.html" class="nav-link">Развитие</a>
+                        <a href="pages/hr-admin.html" class="nav-link">HR Admin</a>
+                        <a href="pages/hr-bp.html" class="nav-link">HR BP</a>
+                        <a href="pages/research.html" class="nav-link">Мир</a>
+                        <a href="pages/ru-research.html" class="nav-link">Россия</a>
+                    </nav>
+                </div>
                 <div style="display: flex; gap: 8px; align-items: center;">
                     <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
                         <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -74,8 +76,7 @@
                             <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
                         </svg>
                     </div>
-                    <h3 class="category-title">Подбор персонала</h3>
-                    <p class="category-desc">Тренды рекрутмента, интервью, онбординг специалистов</p>
+                    <h3 class="category-title">Подбор</h3>
                 </a>
                 <a href="pages/adaptation.html" class="category-card">
                     <div class="category-icon">
@@ -84,7 +85,6 @@
                         </svg>
                     </div>
                     <h3 class="category-title">Адаптация</h3>
-                    <p class="category-desc">Программы онбординга, менторство, интеграция в команду</p>
                 </a>
                 <a href="pages/training.html" class="category-card">
                     <div class="category-icon">
@@ -93,7 +93,6 @@
                         </svg>
                     </div>
                     <h3 class="category-title">Обучение</h3>
-                    <p class="category-desc">Курсы, тренинги, сертификации и повышение квалификации</p>
                 </a>
                 <a href="pages/development.html" class="category-card">
                     <div class="category-icon">
@@ -102,7 +101,6 @@
                         </svg>
                     </div>
                     <h3 class="category-title">Развитие</h3>
-                    <p class="category-desc">Карьерный рост, развитие компетенций, лидерские программы</p>
                 </a>
                 <a href="pages/hr-admin.html" class="category-card">
                     <div class="category-icon">
@@ -110,17 +108,15 @@
                             <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                         </svg>
                     </div>
-                    <h3 class="category-title">Кадровое администрирование</h3>
-                    <p class="category-desc">Документооборот, compliance, HR-метрики и отчётность</p>
+                    <h3 class="category-title">HR Admin</h3>
                 </a>
                 <a href="pages/hr-bp.html" class="category-card">
                     <div class="category-icon">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                            <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm1 18H5V8h14v11z"/>
                         </svg>
                     </div>
                     <h3 class="category-title">HR BP</h3>
-                    <p class="category-desc">Стратегическое партнёрство, бизнес-ориентированный HR</p>
                 </a>
                 <a href="pages/research.html" class="category-card">
                     <div class="category-icon">
@@ -128,8 +124,15 @@
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
                         </svg>
                     </div>
-                    <h3 class="category-title">Мировые исследования</h3>
-                    <p class="category-desc">Переводы ключевых международных HR-исследований</p>
+                    <h3 class="category-title">Мир</h3>
+                </a>
+                <a href="pages/ru-research.html" class="category-card">
+                    <div class="category-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                    </div>
+                    <h3 class="category-title">Россия</h3>
                 </a>
             </div>
         </div>
@@ -147,8 +150,8 @@
                         </svg>
                         19 марта 2026
                     </div>
-                    <h3 class="news-title hover-text-gradient">Рынок ИТ-рекрутмента в России показал рост на 15% в первом квартале</h3>
-                    <p class="news-excerpt">Компании увеличивают бюджеты на подбор специалистов в условиях дефицита кадров...</p>
+                    <h3 class="news-title hover-text-gradient">Рынок труда России: дефицит кадров 3-4 млн человек</h3>
+                    <p class="news-excerpt">Безработица на историческом минимуме 2,1-2,2%. 89% компаний столкнулись с нехваткой персонала. Средняя зарплата ~111 000 руб., рост на 9,5%...</p>
                     <a href="pages/recruitment.html" class="news-link">
                         Читать далее
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -163,9 +166,9 @@
                         </svg>
                         18 марта 2026
                     </div>
-                    <h3 class="news-title hover-text-gradient">Новые подходы к онбордингу: опыт ведущих ИТ-компаний</h3>
-                    <p class="news-excerpt">Исследование показало эффективность программ менторства в первые 90 дней работы...</p>
-                    <a href="pages/adaptation.html" class="news-link">
+                    <h3 class="news-title hover-text-gradient">ИИ в рекрутменте: 46% компаний внедряют AI-скрининг</h3>
+                    <p class="news-excerpt">Автоматизация сокращает time-to-hire на 40%. Но 93% работодателей фиксируют дефицит навыков у кандидатов. ИИ-кандидаты — новый вызов...</p>
+                    <a href="pages/recruitment.html" class="news-link">
                         Читать далее
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
@@ -179,9 +182,9 @@
                         </svg>
                         17 марта 2026
                     </div>
-                    <h3 class="news-title hover-text-gradient">Обучение без отрыва от производства: тренды 2026 года</h3>
-                    <p class="news-excerpt">Микрообучение и AI-платформы становятся стандартом в корпоративном образовании...</p>
-                    <a href="pages/training.html" class="news-link">
+                    <h3 class="news-title hover-text-gradient">Цифровой онбординг: снижение текучести на 35%</h3>
+                    <p class="news-excerpt">Программы первых 90 дней с менторством и чек-листами в КЭДО. Наставничество законодательно закреплено в 2025 году...</p>
+                    <a href="pages/adaptation.html" class="news-link">
                         Читать далее
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
@@ -195,9 +198,9 @@
                         </svg>
                         16 марта 2026
                     </div>
-                    <h3 class="news-title hover-text-gradient">HR-директора обсуждают новые модели карьерного развития</h3>
-                    <p class="news-excerpt">Горизонтальная карьера и проектный подход набирают популярность в ИТ-секторе...</p>
-                    <a href="pages/development.html" class="news-link">
+                    <h3 class="news-title hover-text-gradient">69% компаний инвестируют в обучение сотрудников</h3>
+                    <p class="news-excerpt">Треть компаний планирует обучать работе с ИИ. Микрообучение показывает на 50% лучшую усвояемость. Рост инвестиций в обучение +6,5%...</p>
+                    <a href="pages/training.html" class="news-link">
                         Читать далее
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
@@ -211,9 +214,9 @@
                         </svg>
                         15 марта 2026
                     </div>
-                    <h3 class="news-title hover-text-gradient">Цифровизация кадрового документооборота: новые требования 2026</h3>
-                    <p class="news-excerpt">Изменения в законодательстве упрощают переход на электронные трудовые книжки...</p>
-                    <a href="pages/hr-admin.html" class="news-link">
+                    <h3 class="news-title hover-text-gradient">Горизонтальная карьера: тренд 2026 года</h3>
+                    <p class="news-excerpt">Сотрудники выбирают рост в глубь экспертизы вместо управленческого трека. Внутренняя мобильность — 63% компаний используют...</p>
+                    <a href="pages/development.html" class="news-link">
                         Читать далее
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
@@ -227,9 +230,9 @@
                         </svg>
                         14 марта 2026
                     </div>
-                    <h3 class="news-title hover-text-gradient">Роль HR BP в трансформации бизнеса: кейсы российских компаний</h3>
-                    <p class="news-excerpt">Как HR-партнёры влияют на стратегические решения и рост прибыли...</p>
-                    <a href="pages/hr-bp.html" class="news-link">
+                    <h3 class="news-title hover-text-gradient">Электронные трудовые книжки с 2026 года</h3>
+                    <p class="news-excerpt">Завершается переход на цифровой формат. 55% компаний планируют расширить цифровизацию HR-процессов. КЭДО — новый стандарт...</p>
+                    <a href="pages/hr-admin.html" class="news-link">
                         Читать далее
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>

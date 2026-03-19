@@ -565,32 +565,47 @@ button {
     white-space: nowrap;
 }
 
+.nav-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
 .nav {
     display: flex;
     gap: var(--spacing-1);
     align-items: center;
-    flex-shrink: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: var(--spacing-1) var(--spacing-2);
+}
+
+.nav::-webkit-scrollbar {
+    display: none;
 }
 
 .nav-link {
     padding: var(--spacing-2) var(--spacing-3);
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-small);
     font-weight: var(--font-weight-medium);
     color: var(--color-text-secondary);
     border-radius: var(--radius-s);
     transition: all var(--transition-fast);
     position: relative;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: 2px;
+    bottom: 4px;
     left: var(--spacing-3);
     right: var(--spacing-3);
     height: 2px;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    background: var(--color-primary);
     border-radius: var(--radius-full);
     transform: scaleX(0);
     transition: transform var(--transition-fast);
@@ -598,7 +613,7 @@ button {
 
 .nav-link:hover {
     color: var(--color-primary);
-    background: var(--color-bg-tertiary);
+    background: var(--color-primary-bg);
 }
 
 .nav-link:hover::after {
@@ -641,33 +656,14 @@ button {
 }
 
 /* ===================================
-   Hero Section — Boho Warm Style
+   Hero Section — Simplified Minimal
    =================================== */
 .hero {
-    background: 
-        linear-gradient(135deg, 
-            rgba(119, 0, 255, 0.85) 0%, 
-            rgba(139, 92, 246, 0.8) 35%, 
-            rgba(148, 102, 255, 0.85) 100%
-        ),
-        var(--boho-pattern-lines);
-    padding: var(--spacing-20) 0;
+    background: var(--color-primary);
+    padding: var(--spacing-12) 0;
     color: white;
     position: relative;
     overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 40%),
-        radial-gradient(circle at 60% 80%, rgba(255, 107, 53, 0.2) 0%, transparent 50%);
-    animation: gradientShift 15s ease infinite;
 }
 
 .hero::after {
@@ -676,17 +672,12 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 40px;
     background: linear-gradient(to top, var(--color-bg-primary), transparent);
 }
 
-@keyframes gradientShift {
-    0%, 100% { opacity: 0.5; transform: scale(1); }
-    50% { opacity: 0.8; transform: scale(1.1); }
-}
-
 .hero-content {
-    max-width: 800px;
+    max-width: 700px;
     position: relative;
     z-index: 1;
 }
@@ -695,17 +686,15 @@ button {
     font-size: var(--font-size-title);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
-    margin-bottom: var(--spacing-4);
+    margin-bottom: var(--spacing-3);
     letter-spacing: var(--letter-spacing-tight);
-    animation: fadeInUp 0.8s ease-out;
 }
 
 .hero-subtitle {
-    font-size: var(--font-size-headline);
-    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-title-2);
+    font-weight: var(--font-weight-regular);
     line-height: var(--line-height-relaxed);
-    opacity: 0.95;
-    animation: fadeInUp 0.8s ease-out 0.2s both;
+    opacity: 0.9;
 }
 
 /* ===================================
@@ -728,86 +717,59 @@ button {
     left: 0;
     width: 48px;
     height: 4px;
-    background: linear-gradient(90deg, var(--color-primary), var(--blue-500));
+    background: var(--color-primary);
     border-radius: var(--radius-full);
 }
 
 /* ===================================
-   Categories Section — Boho Warm Style
+   Categories Section — Simplified Minimal
    =================================== */
 .categories {
-    padding: var(--spacing-16) 0;
-    background: var(--color-bg-secondary);
-    background-image: var(--boho-pattern-dots);
+    padding: var(--spacing-12) 0;
+    background: var(--color-bg-primary);
 }
 
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: var(--spacing-4);
+    grid-template-columns: repeat(8, 1fr);
+    gap: var(--spacing-3);
 }
 
 .category-card {
     background: var(--color-bg-elevated);
-    padding: var(--spacing-6);
-    border-radius: var(--radius-l);
-    box-shadow: 0 4px 6px rgba(139, 115, 85, 0.08);
-    transition: all var(--transition-normal);
+    padding: var(--spacing-4);
+    border-radius: var(--radius-m);
+    transition: all var(--transition-fast);
     text-align: center;
-    border: 1px solid var(--boho-beige);
-    position: relative;
-    overflow: hidden;
-}
-
-.category-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, 
-        var(--color-primary) 0%, 
-        var(--color-secondary) 50%, 
-        var(--color-primary) 100%
-    );
-    transform: scaleX(0);
-    transition: transform var(--transition-normal);
+    border: 1px solid var(--color-border-secondary);
 }
 
 .category-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(139, 115, 85, 0.15);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-m);
     border-color: var(--color-primary);
 }
 
-.category-card:hover::before {
-    transform: scaleX(1);
-}
-
 .category-icon {
-    width: 64px;
-    height: 64px;
-    margin: 0 auto var(--spacing-4);
+    width: 48px;
+    height: 48px;
+    margin: 0 auto var(--spacing-3);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--boho-sand), var(--boho-beige));
-    border-radius: var(--radius-l);
-    transition: all var(--transition-normal);
-    border: 2px solid var(--boho-taupe);
+    background: var(--color-primary-bg);
+    border-radius: var(--radius-s);
+    transition: all var(--transition-fast);
 }
 
 .category-card:hover .category-icon {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-    transform: scale(1.15) rotate(8deg);
-    border-color: transparent;
-    box-shadow: 0 8px 16px rgba(139, 92, 246, 0.3);
+    background: var(--color-primary);
+    transform: scale(1.1);
 }
 
 .category-icon svg {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     fill: var(--color-primary);
     transition: fill var(--transition-fast);
 }
@@ -817,24 +779,28 @@ button {
 }
 
 .category-title {
-    font-size: var(--font-size-title-3);
-    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-medium);
     color: var(--color-text-primary);
-    margin-bottom: var(--spacing-2);
+    margin-bottom: var(--spacing-1);
     line-height: var(--line-height-tight);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .category-desc {
-    font-size: var(--font-size-caption);
+    font-size: var(--font-size-small);
     color: var(--color-text-tertiary);
-    line-height: var(--line-height-relaxed);
+    line-height: var(--line-height-normal);
+    display: none;
 }
 
 /* ===================================
-   Latest News Section — Boho Warm Style
+   Latest News Section — Simplified
    =================================== */
 .latest-news {
-    padding: var(--spacing-16) 0;
+    padding: var(--spacing-12) 0;
     background: var(--color-bg-primary);
 }
 
@@ -846,39 +812,17 @@ button {
 
 .news-card {
     background: var(--color-bg-elevated);
-    border: 1px solid var(--boho-beige);
-    border-radius: var(--radius-l);
-    padding: var(--spacing-6);
-    transition: all var(--transition-normal);
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(139, 115, 85, 0.05);
-}
-
-.news-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, 
-        var(--color-primary) 0%, 
-        var(--color-secondary) 50%, 
-        var(--color-primary) 100%
-    );
-    transform: scaleX(0);
-    transition: transform var(--transition-normal);
+    border: 1px solid var(--color-border-secondary);
+    border-radius: var(--radius-m);
+    padding: var(--spacing-5);
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-xs);
 }
 
 .news-card:hover {
-    box-shadow: 0 12px 24px rgba(139, 115, 85, 0.12);
+    box-shadow: var(--shadow-m);
     border-color: var(--color-primary);
-    transform: translateY(-6px);
-}
-
-.news-card:hover::after {
-    transform: scaleX(1);
+    transform: translateY(-4px);
 }
 
 .news-date {
@@ -888,10 +832,6 @@ button {
     font-size: var(--font-size-small);
     color: var(--color-text-tertiary);
     margin-bottom: var(--spacing-3);
-    padding: var(--spacing-1) var(--spacing-3);
-    background: linear-gradient(135deg, var(--boho-sand), var(--boho-beige));
-    border-radius: var(--radius-full);
-    border: 1px solid var(--boho-taupe);
 }
 
 .news-date svg {
@@ -946,45 +886,14 @@ button {
 }
 
 /* ===================================
-   Footer — Boho Warm Style
+   Footer — Simplified
    =================================== */
 .footer {
-    background: linear-gradient(180deg, var(--grey-90) 0%, var(--black) 100%);
+    background: var(--grey-90);
     color: white;
-    padding: var(--spacing-12) 0 var(--spacing-8);
+    padding: var(--spacing-8) 0 var(--spacing-6);
     margin-top: auto;
-    position: relative;
-    overflow: hidden;
-}
-
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, 
-        var(--color-primary) 0%, 
-        var(--color-secondary) 25%, 
-        var(--color-primary) 50%, 
-        var(--color-secondary) 75%, 
-        var(--color-primary) 100%
-    );
-    background-size: 200% 100%;
-    animation: gradientShift 3s ease infinite;
-}
-
-.footer::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: var(--boho-pattern-dots);
-    opacity: 0.3;
-    pointer-events: none;
+    border-top: 1px solid var(--color-border-secondary);
 }
 
 .footer-content {
